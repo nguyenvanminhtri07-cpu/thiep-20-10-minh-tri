@@ -14,7 +14,7 @@ const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&q
 /* ================= KỊCH BẢN ================= */
 const S=[
  {say:TO?'này <em>'+esc(TO)+'</em> ơi!':'này cậu ơi!', bars:1.1, mood:'wave', mode:'hero', bg:0, fx:{meteor:1}},
- {say:'tớ là <em>Nụ</em> — nàng tiên nhỏ của vườn hoa', bars:1.7, mood:'talk'},
+ {say:'tớ là <em>TRÍ DZ</em> — nàng tiên nhỏ của vườn hoa', bars:1.7, mood:'talk'},
  {say:'hôm nay tớ được giao một nhiệm vụ đặc biệt lắm đó…', bars:1.7, mood:'shy'},
  {say:'vì sắp đến ngày…', bars:1, mood:'talk'},
  {scene:'date', mode:'side', say:'<em>20/10</em> rồi!', bars:1.7, mood:'happy', bg:2, fx:{petals:.7,meteor:1}},
@@ -142,7 +142,7 @@ function setupFinal(){
 $('#b-link').addEventListener('click',()=>{
   const v=TO;
   const u=new URL(location.href); u.search=''; if(v) u.searchParams.set('to',v);
-  (navigator.clipboard?navigator.clipboard.writeText(u.toString()):Promise.reject()).then(()=>{$('#b-link').textContent='đã chép ✓';setTimeout(()=>$('#b-link').textContent='chép link',1800);}).catch(()=>prompt('Sao chép liên kết:',u.toString()));
+  (navigator.clipboard?navigator.clipboard.writeText(u.toString()):Promise.reject()).then(()=>{$('#b-link').textContent='đã chép ✓';setTimeout(()=>$('#b-link').textContent='xem lai',1800);}).catch(()=>prompt('Sao chép liên kết:',u.toString()));
 });
 $('#b-replay').addEventListener('click',()=>{
   $$('.rv.on,.node.on,.edge.on,.lbl.on').forEach(e=>e.classList.remove('on'));
